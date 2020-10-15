@@ -162,3 +162,318 @@ function finalCountdown(param1, param2, param3, param4) {
 
 
 // finalCountdown(3, 5, 17, 9)
+
+// Countdown 
+
+function countdown(number) {
+    let array = []
+
+    for (let i = number; i >= 0; i--) {
+        array.push(i)
+    }
+
+    return array
+}
+
+// console.log(countdown(5))
+
+// Print and Return
+
+function printAndReturn(arr) {
+    console.log(arr[0])
+    return arr[1]
+}
+
+// First Plus Length
+
+function firstPlusLength(arr) {
+    return typeof (arr[0]) == "string" ? "Not a number" : arr[0] + arr.length
+}
+
+// console.log(firstPlusLength(["Yo", 2]))
+
+// Values Greater than Second
+
+function valuesGreaterThanSecond(arr) {
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] > arr[1]) console.log(arr[i])
+}
+
+// valuesGreaterThanSecond([1, 3, 5, 7, 9, 13])
+
+// Values Greater than Second Generalized
+
+function valuesGreaterThanSecondGeneralized(arr) {
+    let array = []
+
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] > arr[1]) array.push(arr[i])
+
+    return array
+}
+
+// This Length, That Value
+
+function thisLengthThatValue(num1, num2) {
+    if (num1 === num2) console.log("Jinx!")
+
+    let array = []
+
+    for (let i = 1; i <= num1; i++) {
+        array.push(num2)
+    }
+
+    return array
+}
+
+// console.log(thisLengthThatValue(4, 2))
+
+// Fit the First Value
+
+function fitTheFirstValue(arr) {
+    switch (true) {
+        case (arr[0] > arr.length):
+            console.log("Too big!")
+            break;
+        case (arr[0] < arr.length):
+            console.log("Too small!")
+            break;
+        default:
+            console.log("Just right!")
+    }
+}
+
+// fitTheFirstValue([4, 2, 3, 4])
+
+// Farenhiet to Celcius
+function farenhietToCelcius(degree) {
+    return ((degree - 32) * 5 / 9)
+}
+
+// console.log(farenhietToCelcius(32))
+
+// Celcius to Farenhiet
+function celciusToFarenhiet(degree) {
+    return ((9 / 5 * degree) + 32)
+}
+
+// console.log(celciusToFarenhiet(0))
+
+// Biggie Size
+
+function biggieSize(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= 0) arr[i] = "big"
+    }
+
+    return arr
+}
+
+// console.log(biggieSize([-1, 3, 5, -5]))
+
+// Previous Lengths
+
+function previousLengths(arr) {
+    for (let i = arr.length - 1; i >= 1; i--) {
+        arr[i] = arr[i - 1].length
+    }
+    arr[0] = 0
+
+    return arr
+}
+
+// console.log(previousLengths(["yo", "yo", "yo", "yo"]))
+
+// Print Low, Return High
+function printLowReturnHigh(arr) {
+    let max = arr[0], min = arr[0]
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) max = arr[i]
+        if (arr[i] < min) min = arr[i]
+    }
+
+    console.log(min)
+
+    return max
+}
+
+// console.log(printLowReturnHigh([-1, 3, 5, -5]))
+
+// Add Seven to Most
+
+function addSevenToMost(arr) {
+    let newArr = []
+
+    for (let i = 1; i < arr.length; i++) {
+        newArr.push(arr[i] + 7)
+    }
+
+    return newArr
+}
+
+// console.log(addSevenToMost([1, 2, 3, 4, 5]))
+
+// Print One, Return Another
+
+function printOneReturnAnother(arr) {
+    console.log(arr[arr.length - 2])
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] % 2 == 1) return arr[i]
+
+    return "No odd values"
+}
+
+// console.log(printOneReturnAnother([1, 2, 3, 4, 5]))
+
+// Reverse Array
+
+function reverseArray(arr) {
+    let start = 0, end = arr.length - 1
+
+    while (start < end) {
+        temp = arr[start]
+        arr[start++] = arr[end]
+        arr[end--] = temp
+    }
+
+    return arr
+}
+
+// console.log(reverseArray([1, 2, 3, 4, 5]))
+
+// Double Vision
+
+function doubleVision(arr) {
+    let newArray = []
+
+    for (let i = 0; i < arr.length; i++) newArray.push(arr[i] * 2)
+
+    return newArray
+}
+
+// console.log(doubleVision([1, 2, 3]))
+
+// Outlook: Negative
+
+function outlookNegative(arr) {
+    let newArr = [], num;
+
+    for (let i = 0; i < arr.length; i++) {
+        num = arr[i] < 0 ? arr[i] : arr[i] - (arr[i] * 2)
+        newArr.push(num)
+    }
+
+    return newArr
+}
+
+// console.log(outlookNegative([1, -3, 5]))
+
+// Count Positives 
+function countPositives(arr) {
+    let positives = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) positives++
+    }
+
+    arr[arr.length - 1] = positives
+
+    console.log(arr)
+}
+
+// countPositives([-1, 1, 1, 1])
+
+// Always Hungry
+
+function alwaysHungry(arr) {
+    let hungry = true
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === "food") {
+            console.log("yummy")
+            hungry = false
+        }
+    }
+
+    return hungry ? "I'm hungry" : ""
+}
+
+// console.log(alwaysHungry(["", ""]))
+
+// Evens and Odds
+
+function evensAndOdds(arr) {
+    let evens = 0, odds = 0
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+            evens++
+            if (evens === 3) {
+                console.log("Even more so!")
+                evens = 0
+            }
+        }
+
+        if (arr[i] % 2 == 1) {
+            odds++
+            if (odds === 3) {
+                console.log("That's odd!")
+                odds = 0
+            }
+        }
+    }
+}
+
+// evensAndOdds([1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2])
+
+// Swap helper function
+function swap(arr, start, end) {
+    temp = arr[start]
+    arr[start] = arr[end]
+    arr[end] = temp
+}
+
+// Swap Toward the Center
+function swapTowardCenter(arr) {
+    if (arr.length > 1) {
+        swap(arr, 0, arr.length - 1)
+        if (arr.length > 5)
+            swap(arr, 2, arr.length - 3)
+    }
+
+    return arr
+}
+
+// console.log(swapTowardCenter([1, 2, 3, 4, 5, 6]))
+
+// Scale the Array
+function scaleTheArray(arr, num) {
+    for (let i = 0; i < arr.length; i++)
+        arr[i] = arr[i] * num
+
+    return arr
+}
+
+// console.log(scaleTheArray([2, 2, 2, 2, 2], 2))
+
+// Only Keep the Last Few
+function onlyKeepTheLastFew(arr, start) {
+    let newArr = []
+
+    for (let i = arr.length - start; i < arr.length; i++)
+        newArr.push(arr[i])
+
+    return newArr
+}
+
+// console.log(onlyKeepTheLastFew([2, 4, 6, 8, 10], 3))
+
+// Math Help
+function mathHelp(m, b) {
+    return (-b / m)
+}
+
+// console.log(mathHelp(3, -3))
+
+// 
