@@ -274,10 +274,9 @@ function biggieSize(arr) {
 // Previous Lengths
 
 function previousLengths(arr) {
-    for (let i = arr.length - 1; i >= 1; i--) {
+    for (let i = arr.length - 1; i >= 0; i--) {
         arr[i] = arr[i - 1].length
     }
-    arr[0] = 0
 
     return arr
 }
@@ -474,6 +473,113 @@ function mathHelp(m, b) {
     return (-b / m)
 }
 
-// console.log(mathHelp(3, -3))
+// console.log(mathHelp(3, 12))
 
-// 
+// Poor Kenny
+
+function whatHappensToday() {
+    let event = Math.random() * 100
+
+    switch (true) {
+        case (event < 10):
+            console.log("Volcano Eruption")
+            break;
+        case (event < 15):
+            console.log("Tsunami!")
+            break;
+        case (event < 20):
+            console.log("Earthquake!")
+            break;
+        case (event < 25):
+            console.log("Blizzard! brrr")
+            break;
+        case (event < 30):
+            console.log("Meteor! The sky is falling!")
+            break;
+        default:
+            break;
+    }
+}
+
+// whatHappensToday()
+
+// Soaring IQ
+function soaringIQ(baseIq) {
+    for (let i = 1; i <= 98; i++)
+        baseIq += (i * .01)
+
+    return baseIq
+}
+
+// console.log(soaringIQ(101))
+
+// Letter Grade
+
+function letterGrade(grade) {
+    switch (true) {
+        case (grade >= 90):
+            console.log('A')
+            break;
+        case (grade >= 80 && grade <= 89):
+            console.log('B')
+            break;
+        case (grade >= 70 && grade <= 79):
+            console.log('C')
+            break;
+        case (grade >= 60 && grade <= 69):
+            console.log('D')
+            break;
+        default:
+            console.log('F')
+            break;
+    }
+}
+
+// letterGrade(99)
+
+// More Accurate Grades
+function moreAccurateGrades(grade) {
+    switch (true) {
+        case (grade >= 98):
+            console.log('A+')
+            break;
+        case (grade >= 93 && grade <= 97):
+            console.log('A')
+            break;
+        case (grade >= 90 && grade <= 92):
+            console.log('A-')
+            break;
+        case (grade >= 88):
+            console.log('B+')
+            break;
+        case (grade >= 83 && grade <= 87):
+            console.log('B')
+            break;
+        case (grade >= 80 && grade <= 82):
+            console.log('B-')
+            break;
+        case (grade >= 78):
+            console.log('C+')
+            break;
+        case (grade >= 73 && grade <= 77):
+            console.log('C')
+            break;
+        case (grade >= 70 && grade <= 72):
+            console.log('C-')
+            break;
+        case (grade >= 68):
+            console.log('D+')
+            break;
+        case (grade >= 63 && grade <= 67):
+            console.log('D')
+            break;
+        case (grade >= 60 && grade <= 62):
+            console.log('D-')
+            break;
+        default:
+            console.log('F')
+            break;
+    }
+}
+
+// moreAccurateGrades(92)
