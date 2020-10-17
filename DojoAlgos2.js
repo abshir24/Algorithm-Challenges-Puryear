@@ -583,3 +583,208 @@ function moreAccurateGrades(grade) {
 }
 
 // moreAccurateGrades(92)
+
+// Print 1-255
+
+// for (let i = 1; i < 256; i++) {
+//     console.log(i)
+// }
+
+// Print Odds 1-255
+// for (let i = 1; i < 256; i++) {
+//     if (i % 2 == 1)
+//         console.log(i)
+// }
+
+// Print Ints and Sum 0-255
+function printIntsAndSum() {
+    let sum = 0;
+
+    for (let i = 0; i < 255; i++) {
+        sum += i
+        console.log("Sum so far ", sum)
+    }
+}
+
+// printIntsAndSum()
+
+// Iterate and Print Array
+
+function iterateAndPrintArr(arr) {
+    for (let i = 0; i < arr.length; i++)
+        console.log(arr[i])
+}
+
+// iterateAndPrintArr([1, 2, 3, 4, 5])
+
+// Find and Print Max
+
+function findAndPrintMax(arr) {
+    let max = arr[0]
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) max = arr[i]
+    }
+
+    console.log("Max Value is ", max)
+}
+
+// findAndPrintMax([1, 2, 3, 4, 5,])
+
+// Get and Print Average
+function getAndPrintAverage(arr) {
+    let sum = 0
+
+    for (let i = 0; i < arr.length; i++)sum += arr[i]
+
+    console.log("The average is ", sum / arr.length)
+}
+
+// getAndPrintAverage([1, 2, 3, 4, 5])
+
+// Array with Odds
+function arrayWithOdds() {
+    let arr = []
+
+    for (let i = 1; i < 256; i++) {
+        if (i % 2 == 1)
+            arr.push(i)
+    }
+
+    console.log(arr)
+}
+
+// arrayWithOdds()
+
+// Square the Values
+
+function squareTheValues(arr) {
+    for (let i = 0; i < arr.length; i++)
+        arr[i] = arr[i] * arr[i]
+
+
+}
+
+// let test = [1, 2, 3, 4, 5]
+
+// squareTheValues(test) Arrays in JS are pass by reference. 
+
+// console.log(test)
+
+// Greater than Y
+function greaterThanY(arr, y) {
+    let count = 0
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] > y) count++
+
+    console.log(count)
+}
+
+// greaterThanY([1, 2, 3, 4, 5], 2)
+
+// Zero Out Negative Numbers
+function zeroOutNegativeNumbers(arr) {
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] < 0) arr[i] = 0
+
+    return arr
+}
+
+// console.log(zeroOutNegativeNumbers([-1, -2, -3, -4, -5]))
+
+// Max, Min, Average
+
+function maxMinAverage(arr) {
+    let max = arr[0], min = arr[0], sum = 0
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) max = arr[i]
+        if (arr[i] < min) min = arr[i]
+        sum += arr[i]
+    }
+    console.log("MAX,MIN,AVG", max, min, (sum / arr.length))
+}
+
+// maxMinAverage([2, 3, 1, 4, 5])
+
+// Shift Array Values
+
+function shiftArrayValues(arr) {
+    for (let i = 0; i < arr.length - 1; i++)arr[i] = arr[i + 1]
+
+    arr[arr.length - 1] = 0
+
+    console.log(arr)
+}
+
+// shiftArrayValues([1, 2, 3, 4, 5])
+
+// Swap String For Array Negative Values
+function swapStringForArrayNegativeValues(arr) {
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] < 0) arr[i] = 'Dojo'
+
+    return arr
+}
+
+// console.log(swapStringForArrayNegativeValues([-1, -2, -3, -4, -5]))
+
+// Sigma 
+
+function sigma(num) {
+    let sum = 0
+
+    for (let i = 1; i <= num; i++)sum += i
+
+    return sum
+}
+
+// console.log(sigma(5))
+
+// Factorial 
+function factorial(num) {
+    let factor = 1
+
+    for (let i = 1; i <= num; i++)factor *= i
+
+    return factor
+}
+
+// console.log(factorial(5))
+
+// Star Art
+
+function drawLeftStars(num) {
+    let stars = ''
+
+    for (let i = 1; i <= 75; i++) {
+        if (i <= num) stars += '*'
+        else stars += '-'
+    }
+
+    console.log(stars)
+}
+
+function drawRightStars(num) {
+    let stars = ''
+
+    for (let i = 1; i <= 75; i++) {
+        if (i <= 75 - num) stars += '-'
+        else stars += '*'
+    }
+
+    console.log(stars)
+}
+
+function drawCenterStars(num) {
+    let stars = '', emptySpace = (75 - num) / 2
+    for (let i = 1; i <= emptySpace; i++) stars += '-'
+    for (let i = 1; i <= num; i++) stars += '*'
+    for (let i = 1; i <= emptySpace; i++) stars += '-'
+    console.log(stars)
+}
+
+drawLeftStars(50)
+drawCenterStars(50)
+drawRightStars(50)
+
