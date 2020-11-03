@@ -784,7 +784,43 @@ function drawCenterStars(num) {
     console.log(stars)
 }
 
-drawLeftStars(50)
-drawCenterStars(50)
-drawRightStars(50)
+// drawLeftStars(50)
+// drawCenterStars(50)
+// drawRightStars(50)
 
+
+// Character Art
+
+function drawLeftChars(num,char) {
+    let chars = ''
+
+    for (let i = 1; i <= 75; i++) {
+        if (i <= num) chars += char
+        else chars += '-'
+    }
+
+    console.log(chars)
+}
+
+function drawRightChars(num,char) {
+    let chars = ''
+
+    for (let i = 1; i <= 75; i++) {
+        if (i <= 75 - num) chars += '-'
+        else chars += char
+    }
+
+    console.log(chars)
+}
+
+function drawCenterChars(num,char) {
+    let chars = '', emptySpace = (75 - num) / 2
+    for (let i = 1; i <= emptySpace; i++) chars += '-'
+    for (let i = 1; i <= num; i++) chars += char
+    for (let i = 1; i <= emptySpace; i++) chars += '-'
+    console.log(chars)
+}
+
+drawLeftChars(50,"-")
+drawCenterChars(50,"*")
+drawRightChars(50,"&")
