@@ -874,4 +874,37 @@ function messyMathMashup(num){
     return sum
 }
 
-console.log(messyMathMashup(6))
+// console.log(messyMathMashup(6))
+
+// Twelve-Bar Blues
+function twelveBarBlues(){
+    for(let i = 1;i<=12;i++)
+        console.log(`${i} chick boom chick`)
+}
+
+// twelveBarBlues()
+
+// Fibonnaci
+function fibonnaci(num){
+    let a = 0,b = 1, c = 0
+
+    while(num>0){
+        c = a+b
+        a = b
+        b = c
+        num--
+    }
+    console.log(a)
+}
+
+// fibonnaci(4)
+
+// sum to One Digit
+
+function sumToOneDigit(num){
+    let sum = 0
+    while(num >=10){
+        sum += num%10
+        num = num/10
+    }
+}
