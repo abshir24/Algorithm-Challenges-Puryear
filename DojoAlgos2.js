@@ -821,6 +821,57 @@ function drawCenterChars(num,char) {
     console.log(chars)
 }
 
-drawLeftChars(50,"-")
-drawCenterChars(50,"*")
-drawRightChars(50,"&")
+// drawLeftChars(50,"-")
+// drawCenterChars(50,"*")
+// drawRightChars(50,"&")
+
+
+//Threes and Fives 
+function threesFives(start,end){
+    let sum = 0;
+    for(let i = start;i<=end;i++){
+        if((i%3 == 0 || i%5==0) && !(i%3 ==0 && i%5==0)){
+            sum+=i
+        }
+    }
+
+    console.log("SUM", sum)
+}
+
+// threesFives(10,16)
+
+// Generate coin change
+
+function generateCoinChange(amount){
+    let quarters =  Math.round(amount / 25)
+    amount = amount % 25
+    let dimes =  Math.round(amount / 10)
+    amount =  amount % 10
+    let nickels  =  Math.round(amount / 5)
+    amount = amount % 5
+    pennies = amount
+
+    console.log(
+        `quarters: ${quarters}`,
+        `dimes: ${dimes}`,
+        `nickels: ${nickels}`,
+        `pennies: ${pennies}`
+    )
+}
+
+// generateCoinChange(111)
+
+// Messy Math Mashup
+function messyMathMashup(num){
+    let sum = 0
+    for(let i =0;i<=num;i++){
+        if(i%3 === 0) continue
+        else if(i % 7 === 0) sum += (i*2)
+        else if( num/3 === i) return -1
+        else sum += i
+    }
+
+    return sum
+}
+
+console.log(messyMathMashup(6))
