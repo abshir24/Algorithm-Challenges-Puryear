@@ -899,12 +899,22 @@ function fibonnaci(num){
 
 // fibonnaci(4)
 
-// sum to One Digit
 
+// Sum to One Digit
 function sumToOneDigit(num){
-    let sum = 0
-    while(num >=10){
-        sum += num%10
-        num = num/10
+    sum = 0
+
+    while(num > 0 || sum > 9){
+        if(num == 0){
+            num = sum
+            sum = 0
+        }
+
+        sum += num %10
+        num = Math.floor(num/10)
+
     }
+    return sum
 }
+
+console.log(sumToOneDigit(928))
